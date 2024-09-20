@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoPunks GM Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>NoPunks GM Tool</h1>
+    
+    <!-- Load image -->
+    <input type="file" id="imageLoader" accept="image/*"><br><br>
+
+    <!-- Overlay Selection -->
+    <div id="overlayMenu">
+        <h3>Choose a matching color :</h3>
+        <div class="overlay-container">
+            <img class="overlay-option" src="images/nopunks/overlay1.png" alt="Overlay 1" width="100" onclick="selectOverlay('images/nopunks/overlay1.png')">
+            <div class="overlay-name">White GM</div>
+        </div>
+        <div class="overlay-container">
+            <img class="overlay-option" src="images/nopunks/overlay2.png" alt="Overlay 2" width="100" onclick="selectOverlay('images/nopunks/overlay2.png')">
+            <div class="overlay-name">Grey GM</div>
+        </div>
+        <div class="overlay-container">
+            <img class="overlay-option" src="images/nopunks/overlay3.png" alt="Overlay 3" width="100" onclick="selectOverlay('images/nopunks/overlay3.png')">
+            <div class="overlay-name">Black GM</div>
+        </div>
+    </div>
+    
+    <!-- Adjust Overlay -->
+    <div class="controls">
+        <label for="overlaySize">Overlay Size :</label>
+        <input type="range" id="overlaySize" min="10" max="200" value="100">
+        
+        <label for="overlayInsetX">Inset X :</label>
+        <input type="range" id="overlayInsetX" min="-800" max="200" value="0">
+        
+        <label for="overlayInsetY">Inset Y :</label>
+        <input type="range" id="overlayInsetY" min="-800" max="200" value="0">
+    </div>
+    
+    <!--Canvas Zone -->
+    <div id="canvasContainer">
+        <canvas id="imageCanvas"></canvas>
+    </div>
+    
+    <!-- Download Btn -->
+    <button id="downloadBtn">Download</button>
+
+    <!-- Footer -->
+    <footer>
+        <a href="https://opensea.io/collection/nopunkism">See The NoPunks collection on Opensea</a>
+        <p>GM Tool created by <a href="https://twitter.com/0x_Quickosss" target="_blank">Quickosss</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
